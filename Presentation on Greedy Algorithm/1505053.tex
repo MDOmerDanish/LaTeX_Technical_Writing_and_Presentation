@@ -1,0 +1,174 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{color}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\title[Being Greedy]{Greedy Algorithm}
+%% \subtitle{in sleepy mode}
+
+\author[Sagor and Danish]{Sagor Biswas  \newline Md. Omer Danish}
+
+\institute[BUET]
+{
+
+Department of Computer Science and Engineering \\
+BUET\\
+}
+\date{\today}
+
+
+\AtBeginSection
+{
+\begin{frame}{We will Discuss}
+    \tableofcontents[currentsection]
+\end{frame}
+}
+
+\begin{document}
+\titlepage
+
+\begin{frame}{Contents}
+    \tableofcontents
+\end{frame}
+
+\section{A real life scenario}
+%\newline
+
+\begin{frame}{A real life scenario}
+There is a very rich man who has infinite supply of 500 Taka ,100 Taka  and 50 Taka notes.\pause
+\newline
+He has a friend who needs some money. \\He asks for 650 Taka but in minimum number of notes.
+
+
+\end{frame}
+
+\subfile{figures/image.tex}
+
+\begin{frame}{Some possible ways to give money}
+
+\newline
+If there was no restriction, he could have given it in many ways.\pause \\Such as ...\\
+
+\setbeamercovered{dynamic}
+\begin{enumerate}
+    \item <2->50+50+50+100+100+100+100+100
+    \item<3-> 50+50+50+500 
+    \item<4-> 50+50+50+50+50+100+100+100+100
+    
+    \item<5->  50+50+50+50+50+50+50+100+100+100 .
+    
+
+
+
+\end{enumerate}
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Best solution to give money}
+
+But do they satisfy the condition of minimum note number?? \newline No...\\ \\ \pause
+\newline
+
+After thinking for a while he proposes a solution 
+\newline  500+100+50\\ \pause
+\newline  How did he come to the solution???\\ \\ \pause
+\newline
+For every iteration he has to give note of largest value that does not take him past the amount to be given.\pause
+\newline  
+
+
+\textbf{Actually  this  is  Greedy Algorithm}
+\end{frame}
+
+
+
+
+
+\section{Introduction to Greedy Algorithm}
+
+\begin{frame}{Greedy Algorithm}
+%\centering
+A greedy algorithm is an algorithmic paradigm that follows the problem solving heuristic of making the locally optimal choice at each stage with the intent of finding a global optimum. 
+\newline Let's see it's Pros and Cons \newline \pause
+\newline 
+\begin{itemize}
+        \item Simple,easy to implement and runs fast\pause
+        \item  But very often they don't provide a globally optimum.
+    \end{itemize} 
+\newline .
+ 
+
+
+\end{frame}
+
+
+
+\section{Problem with Greedy algorithm}
+
+\begin{frame}{Problems with Greedy Approach }
+Find a path from root to leaf having maximum sum\newline
+
+%\only<1>{ Find the path having maximum sum\newline}
+%\only<2>{ Found path with Greedy Algorithm\newline}
+%\only<3->{ Actual Solution to the problem\newline}
+%\setbeamercovered{dynamic}
+\only<1> \subfile{figures/Graph.tex}
+\only<2> \subfile{figures/GreedySolution.tex}
+\only<3->\subfile{figures/RightSolution.tex} 
+
+\end{frame}
+
+\begin{frame}{Problem characteristics to use this algorithm }
+
+Problems on which greedy approach work has two properties \newline
+\setbeamercovered{dynamic}
+
+\begin{enumerate}
+    %\centering
+    \item \textbf{1.Greedy-choice property}
+    \begin{itemize}
+        \item A global optimum can be arrived at by selecting a local optimum.
+        
+    \end{itemize} \pause
+    
+    \item \textbf{2.Optimum substructure property}
+    \begin{itemize}
+        \item An optimum solution to the problem contains an optimum solution to the subproblems.
+        
+    \end{itemize} 
+\end{enumerate}
+
+\end{frame}
+
+\section{Applications}
+\begin{frame}{Applications}
+\setbeamercovered{dynamic}
+\begin{enumerate}
+    %\centering
+    \item Huffman Coding
+    \item<2-> Fractional Knapsack Problem 
+    \item<3-> Prim's Minimum Spanning Tree
+    
+    \item<4-> Job Sequencing Problem
+    
+    \item<5-> Activity Selection Problem
+
+
+
+\end{enumerate}
+
+\end{frame}
+
+
+
+\end{document}
