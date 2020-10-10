@@ -1,0 +1,30 @@
+Greedy algorithms have several drawbacks:
+
+
+\begin{description}
+\item[ Hard to design:]  Once you have found the  right greedy approach, designing 
+greedy algorithms can be easy. However, finding the right approach can be hard.
+\item[Hard to verify:] Showing a greedy algorithm is correct often requires a 
+nuanced argument.
+
+\end{description}
+
+~~~~ \\ \\ 
+Now, we shall look at an example where greedy algorithm will provide us wrong answer.\\
+We know from greedy algorithm that if we choose  local optimal at each stage it will  form a global optimum. It is true in some cases but not for all time.\\
+
+Let's have a look at the figure above .
+\subfile{Subs/Graph.tex}	 
+We want to find the maximum value of addition from root node to leaf node.
+%\newpage
+~~~\\ \\
+\subfile{Subs/GreedySolution.tex} ~~~\\
+If we approach according to greedy algorithm we get a value that is 3+7+11 = 20, which is not maximum value of addition.
+
+~~~\\ \\ \\
+%\newpage
+\subfile{Subs/RightSolution.tex} ~~~\\
+Where the actual optimal solution is 3+4+20 = 27
+
+That means in this exmple greedy algorithm is unable to find global optimum.
+	

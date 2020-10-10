@@ -1,0 +1,14 @@
+Now, we shall look at an example.\\ \\ 
+Suppose, there is a very rich man who has infinite supply of 500 Taka ,100 Taka  and 50 Taka notes. He has a friend who needs some money. He asks for 650 Taka but in minimum number of notes.\\
+If there was no restriction, he could have given it in many ways.
+In any combination of 500, 100 and 50 taka that sums 650. \\
+But they don't satisfy the condition of minimum note number.\\
+
+We can use Greedy approach to solve this problem.\\
+First, we shall find the biggest note less than 650, which is 500 Taka. So, the sum is 500.\\
+Then, we shall find the biggest note less than 650-500 = 150, which is 100 Taka. Now the sum is 600.\\
+Finally we shall choose the note which is less or equals to 650-600 = 50 Taka.\\
+And that is our answer. One 500 Taka, One 100 Taka, One 50 Taka.\\
+\\
+For every iteration we chose note of largest value that does not take us past the amount to be given. \\
+This algorithm is Greedy Algorithm.\\
